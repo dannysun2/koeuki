@@ -1,0 +1,22 @@
+<div class="page-header">
+  <h1>Koeuki</h1>
+</div>
+
+<% @shoes.each do |shoe| %>
+<div class="panel panel-default">
+  <div class="panel-body">
+<div class="media">
+  <div class="media-left media-middle">
+    <a href="#">
+      <img class="media-object" src="..." alt="...">
+    </a>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading"><%= shoe.name %></h4>
+    <p><%= number_to_currency shoe.price/100 %></p>
+    <p><%= render 'payola/transactions/checkout', sellable: shoe %></p>
+  </div>
+</div>
+</div>
+</div>
+<% end %>
